@@ -1,0 +1,129 @@
+<title>Buy a new Tesla today | Tesla</title>
+<div class="main-inventory-wrapper" ng-controller="inventoryCtrl">
+  <div class="header-container-inventory">
+
+    <div  class="header-section" id="header-section2">
+          <a href="#"><img id="burg" src="./images/hamburger2.png" alt=""></a>
+          <img ui-sref="mainmobile" src="./images/client_logo_tesla.png" class="main-logo" alt="">
+        </div>
+        <div class="logo-container">
+    </div> <!-- end of header section-->
+
+    <div class="logo-container" id="logo-container">
+      <div class="logo">
+        <img ui-sref="mainmobile" src="./images/client_logo_tesla.png" class="main-logo" alt="">
+      </div><!-- end logo -->
+    </div><!-- end logo container -->
+    <div class="models-container" id="models-container">
+      <div class="models">
+        <ul class="models-list">
+
+        </ul>
+      </div>
+    </div><!-- end model container -->
+    <div class="links-container" id="links-container">
+      <div class="links">
+        <ul class="links-list">
+          <li ui-sref="models">MODEL S</li>
+          <li ui-sref="modelx" >MODEL X</li>
+          <li ui-sref="model3">MODEL 3</li>
+          <li>SOLAR</li>
+        </ul>
+      </div><!-- end link -->
+    </div><!-- end links container -->
+  </div><!-- end header-container inventory -->
+
+  <div class="inventory-hero">
+    <img src="images/inventory-hero.jpg" id="inventory-hero" alt="">
+    <div class="inventory-navbar">
+      <div class="navbar-title" id="navbar-title">
+        <h1>New Inventory</h1>
+      </div>
+      <div class="navbar-links" id="navbar-links">
+        <ul>
+          <!-- <li>Features</li>
+          <li>Test Drive</li>
+          <li>Custom Order</li>
+          <li>Pre-Owned</li>
+          <li>Get Updates</li> -->
+        </ul>
+      </div><!-- end navbar links -->
+      <div class="white-line" id="white-line"></div><!-- end white line -->
+      <div class="navbar-text" id="navbar-text">
+        <h1>Buy a Tesla Today</h1>
+        <p>New cars, pre-configured, built and ready to drive.</p>
+      </div>
+    </div><!-- end inventory navbar -->
+  </div><!-- end inventory-hero -->
+
+  <div class="filter-section" id="filter-section">
+    <!-- <div class="sort"> -->
+      <!-- <h3>SORT BY</h3> -->
+      <!-- <select class="sortCars" name="">
+        <option value="" class="lowFirst">Price (low to high) </option>
+        <option value="" class="highFirst">Price (high to low) </option>
+      </select> -->
+    <!-- </div> -->
+    <div class="inventory-field sort" id="inventory-field">
+        <label for="sorting"><h3>SORT BY</h3></label>
+        <select id="soflow">
+          <option selected="selected"></option>
+          <!-- <option value="AF">Featured</option>\ -->
+          <option value="">Price (low to high)</option>
+          <option value="">Price (high to low) </option>
+          <option value="">Range (low to high) </option>
+          <option value="">Range (high to low) </option>
+        </select></input>
+    </div>
+    <div class="price-filter">
+      <!-- <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/> -->
+      <!-- <input type="range" name="" min="0" max="100"  multiple value="10, 80" step="10" onChange="sliderChange(this.value)">
+      <p>Slider Value = <span id="sliderStatus">50</span></p> -->
+    </div>
+    <div class="model-filter" id="model-filter">
+      <h1>MODELS</h1>
+<!-- <<<<<<< HEAD -->
+      <div class="model-filter-input"><input type="checkbox" id="checkbox-2-1" class="reg-checkbox" value="updates" name="models" value="" ng-click="myFilter = {model: 'Model S'}"> <p>Model S</p></div>
+    <div class="model-filter-input"><input type="checkbox" id="checkbox-2-1" class="reg-checkbox" value="updates" name="modelx" value="" ng-click="myFilter = {model: 'Model X'}"> <p>Model X</p></div>
+<!-- ||||||| merged common ancestors
+      <div class="model-filter-input"><input type="checkbox" id="checkbox-2-1" class="reg-checkbox" value="updates" name="models" value=""> <p>Model S</p></div>
+      <div class="model-filter-input"><input type="checkbox" id="checkbox-2-1" class="reg-checkbox" value="updates" name="modelx" value=""> <p>Model X</p></div>
+=======
+      <div class="model-filter-input"><input type="checkbox" id="checkbox-2-1" class="reg-checkbox" value="updates" name="models" value=""ng-click="myFilter = {model: 'Model S'}"> <p>Model S</p></div>
+      <div class="model-filter-input"><input type="checkbox" id="checkbox-2-1" class="reg-checkbox" value="updates" name="modelx" value=""ng-click="myFilter = {model: 'Model X'}"> <p>Model X</p></div>
+>>>>>>> 1177920557246e5864f805825f81e0d651304e1e -->
+    </div>
+    <div class="color-filter" id="color-filter">
+      <div class="colors">
+        <h3>EXTERIOR</h3>
+        <ul>
+          <li id="Black" ng-click="myFilter = {color: 'Black'}"></li>
+          <li id="White" ng-click="myFilter = {color: 'White'}"></li>
+          <li id="Blue" ng-click="myFilter = {color: 'Blue'}"></li>
+          <li id="Silver" ng-click="myFilter = {color: 'Silver'}"></li>
+          <li id="Red" ng-click="myFilter = {color: 'Red'}"></li>
+        </ul>
+      </div><!-- end colors -->
+    </div><!-- end color filter -->
+  </div><!-- end filter section -->
+
+
+
+  <div class="car-inventory-wrapper">
+    <div class="car-inventory" style="color:black;" ng-repeat="car in Cars | filter: myFilter">
+      <div class="vehicle" id="vehicle">
+        <div class="vehicle-image" ui-sref="details({id: car.id})"><img class="carimage" src="{{car.inventoryimage}}" alt=""></div><!-- end vehicle-image -->
+        <div class="battery-badge"><img src="{{car.badge}}" alt=""></div><!-- end battery badge -->
+        <div class="battery-capacity">{{car.batterycapacity}}</div><!-- end battery capacity -->
+        <div class="price">${{car.price}}</div><!-- end price -->
+        <div class="leasing"><p>$1,651/mo. Tesla Lease with $7,346 due at signing </p></div><!-- end leasinig -->
+        <div class="delivery"><img src="./images/icon-calendar.svg" alt=""><p> 14 Day Delivery</p></div><!-- end delivery -->
+        <div class="icons">
+          <img src="./images/icon-21-wheel.svg" alt="">
+          <img src="./images/icon-premium.svg" alt="">
+          <img id="glassroof" src="./images/icon-glassroof.svg" alt="">
+        </div><!-- end icons -->
+      </div><!-- end vehicle -->
+    </div><!-- end car-inventory -->
+  </div><!-- car-inventory-wrapper -->
+</div><!-- end main inventory wrapper -->

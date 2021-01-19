@@ -1,0 +1,127 @@
+<title>Details Page</title>
+<div class="main-details-wrapper ng-views" autoscroll="true">
+  <div class="header-container-inventory">
+
+    <div  class="header-section" id="details-header-section">
+          <a href="#"><img id="burg" src="./images/hamburger2.png" alt=""></a>
+          <img ui-sref="mainmobile" src="./images/client_logo_tesla.png" class="main-logo" alt="">
+        </div>
+        <div class="logo-container">
+    </div> <!-- end of header section-->
+
+    <div class="logo-container" id="logo-container">
+      <div class="logo">
+        <img ui-sref="mainmobile" src="./images/client_logo_tesla.png" class="main-logo" alt="">
+      </div><!-- end logo -->
+    </div><!-- end logo container -->
+    <div class="models-container" id="models-container">
+      <div class="models">
+        <ul class="models-list">
+
+        </ul>
+      </div>
+    </div><!-- end model container -->
+    <div class="links-container" id="links-container">
+      <div class="links">
+        <ul class="links-list">
+          <li ui-sref="models">MODEL S</li>
+          <li ui-sref="modelx" >MODEL X</li>
+          <li ui-sref="model3">MODEL 3</li>
+          <li>SOLAR</li>
+        </ul>
+      </div><!-- end link -->
+    </div><!-- end links container -->
+  </div><!-- end header-container inventory -->
+
+
+  <div class="details-navbar">
+    <div class="nav-title">
+      <h1>New Inventory</h1>
+    </div><!-- end navbar title -->
+    <div class="nav-links" id="details-navlinks">
+      <ul>
+        <!-- <li>Features</li>
+        <li>Test Drive</li>
+        <li>Custom Order</li>
+        <li>New Inventory</li>
+        <li>Pre-Owned</li> -->
+      </ul>
+    </div>
+  </div><!-- end details-navbar -->
+  <div class="black-line" id="black-line"></div><!-- end black line -->
+
+  <div class="details-main-content">
+    <div class="left-side">
+      <div class="details-images">
+        <div class="details-main-image" id="details-main-image" ng-style="style">
+          <!-- <img src="{{car[0].images[0].location}}" ng-style="style" alt=""> -->
+
+        </div><!-- end details main -->
+        <div class="details-other-image">
+          <img src="{{image.location}}" alt="" ng-repeat="image in car[0].images" ng-if="$index > 0">
+          <!-- <img src="images/blues-detail3.jpeg" alt="">
+          <img src="images/blues-detail4.jpeg" alt="">
+          <img src="images/blues-detail5.jpeg" alt=""> -->
+        </div>
+      </div><!-- details images -->
+      <div class="details-text">
+        <p>This <span>{{car[0].model}}</span> is a showroom floor model and is eligible for EV incentives. These incentives take the form of rebates and tax credits available after purchase. EV incentives are based on registration in California.</p>
+        <p>Every <span>{{car[0].model}}</span> receives a full inspection, remaining battery and drive warranty and a four year, 50,000 miles new vehicle limited warranty with 24 hour roadside assistance.</p>
+        <p>The calculation above provides information about the price of the car if you pay in cash and the estimated monthly payment if you participate in Tesla Leasing. The calculation does not include taxes or fees, which vary from state to state and in some cases, town to town.</p>
+        <p>We’re able to offer Tesla Leasing in an increasing number of states. For states where Tesla Leasing is not available, we can help you identify other financing options. Participation in Tesla Leasing is based on a standard approval process. No security deposit required.</p>
+        <p>This <span>{{car[0].model}}</span> is available for pickup. Shipment to your nearest service center may require a transportation fee up to $2,000. Shipment to Alaska or Hawaii may cost up to $5,000.</p>
+      </div><!-- details text -->
+    </div><!-- end left side -->
+    <div class="right-side">
+      <div class="details-description">
+        <img src="{{car[0].badge}}" alt="">
+        <h1>2017 | {{car[0].miles}}</h1>
+        <h5></h5>
+        <p>36 month lease with 10,000 miles per year <br> $7,323 due at signing</p>
+        <h5>${{car[0].price}}</h5>
+        <p>$131,450 cash price before EV incentives</p>
+        <button type="button" name="button">BUY</button>
+        <div class="line"></div><!-- end line -->
+      </div><!-- end details description -->
+      <div class="details-features" id="details-features">
+        <div class="feature-title">
+          <h1>Features</h1>
+        </div><!-- end feature title -->
+        <div class="feature-list">
+          <ul>
+            <li>All-Wheel Drive</li>
+            <li>Deep Blue Metallic Paint</li>
+            <li>Glass Roof</li>
+            <li>21" Grey Turbine Wheels</li>
+            <li>Black Tesla Premium Seats</li>
+            <li>Figured Ash Wood Décor</li>
+            <li>Integrated Center Console</li>
+            <li>Black Alcantara Headliner</li>
+            <li>Ludicrous Speed Upgrade</li>
+            <li>Tesla Red Brake Calipers</li>
+            <li>Free Supercharging</li>
+            <li>Autopilot Hardware 2</li>
+            <li>Premium Upgrades Package</li>
+            <li>Smart Air Suspension</li>
+          </ul>
+        </div><!-- end feature list -->
+      </div><!-- details features -->
+      <div class="line"></div><!-- end line -->
+      <div class="details-newsletter">
+        <p>Be the first to receive the latest Tesla news, events and product updates.</p>
+        <button id="emailbtn" type="button" name="button">GET NEWSLETTER</button>
+      </div><!-- end details newsletter -->
+    </div><!-- end right side -->
+  </div><!-- end details main content -->
+
+
+
+  <!-- {{car[0].images[0]}}
+  <img src="{{car[0].images[0].location}}" alt="" > -->
+  <!-- {{car[0].price}} -->
+
+  <!-- <div class="test" ng-repeat="image in car[0].images" ng-style="styleX">
+    hey
+  </div> -->
+
+</div><!-- end main wrapper -->
